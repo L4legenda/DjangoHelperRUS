@@ -5,7 +5,8 @@
 pip install Pillow 
 ```
 
-### Настройка папки media
+### Настройка папки Media
+Папка куда будут сохраняться файлы
 ```python
 #file 'settings.py'
 
