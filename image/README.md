@@ -25,11 +25,19 @@ DBimage = Picture(
 )
 DBimage.save()
 ```
-### HTML форма
+### HTML форма 
 ```HTML
 <form action="" method="POST" enctype="multipart/form-data">
+    <!--Обязательный токен Django -->
     {% csrf_token %}
     <input type="file" name="picture">
     <input type="submit" value="Submit">
 </form>
+```
+
+### HTML вывод изображений
+```HTML
+{% for pic in picture %}
+    <img src="{{pic.file.url}}" alt="">
+{% endfor %}
 ```
