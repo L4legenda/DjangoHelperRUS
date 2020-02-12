@@ -18,9 +18,9 @@ class Picture(models.Model):
 
 ### Добавление в модель
 ```python
-image = Picture(
+DBimage = Picture(
     img = req.FILES['picture'],
     # picture - это name в input
 )
-picture.save()
+DBimage.save()
 ```
