@@ -25,6 +25,20 @@ DBimage = Picture(
 )
 DBimage.save()
 ```
+### Взятие из модели
+```python
+from my_app.models import Picture
+
+#Все изображения
+picture = Picture.objects.all() 
+
+#Последнее изображение
+picture = Picture.objects.last()
+
+#Изобрадение по атрибуту
+picture = Picture.objects.get(attr="value", ...)
+```
+
 ### HTML форма 
 ```HTML
 <form action="" method="POST" enctype="multipart/form-data">
