@@ -18,6 +18,8 @@ class Picture(models.Model):
 
 ### Добавление в модель
 ```python
+from my_app.models import Picture
+
 DBimage = Picture(
     img = req.FILES['picture'],
     # picture - это name в input
