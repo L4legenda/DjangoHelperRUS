@@ -5,6 +5,26 @@
 pip install Pillow 
 ```
 
+### Настройка папки media
+```python
+#file 'settings.py'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+MEDIA_URL = "/media/"
+```
+
+### Настройка url изображений
+```python
+#file 'urls.py'
+
+from django.conf.urls.static import static
+from django.conf import settings
+
+urlpatterns = [
+    ...
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+
 ### Модель
 ```python
 class Picture(models.Model):
