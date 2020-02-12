@@ -21,6 +21,15 @@ class Picture(models.Model):
 DBimage = Picture(
     img = req.FILES['picture'],
     # picture - это name в input
+    # смотреть ниже в HTML форма
 )
 DBimage.save()
+```
+### HTML форма
+```HTML
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="picture">
+    <input type="submit" value="Submit">
+</form>
 ```
