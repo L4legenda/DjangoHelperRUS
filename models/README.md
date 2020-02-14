@@ -18,15 +18,18 @@ class Picture(models.Model):
 name = models.CharField(max_length=50)
 # max_length - максимальная длина текста
 
+#Модель текста
+text = models.TextField()
+
 #Модель числа
 num = models.IntegerField()
 
 #Модель даты
-field_name = models.DateField()
+date = models.DateField()
 #Автоматически добаляет сегодняшнюю дату
 
-#Модель текста
-text = models.TextField()
+#Модель дата и время
+datetime = models.DateTimeField(default=timezone.now)
 ```
 
 ### Внешние ключи
