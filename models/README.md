@@ -14,7 +14,7 @@ class Picture(models.Model):
 
 ### Типы моделей
 ```python
-#Модель текста
+#Модель названия
 name = models.CharField(max_length=50)
 # max_length - максимальная длина текста
 
@@ -25,6 +25,8 @@ num = models.IntegerField()
 field_name = models.DateField()
 #Автоматически добаляет сегодняшнюю дату
 
+#Модель текста
+text = models.TextField()
 ```
 
 ### Внешние ключи
