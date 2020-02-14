@@ -16,4 +16,5 @@ class Picture(models.Model):
 ```python
 #Модель текста
 name = models.CharField(max_length=50)
+# max_length - максимальная длина текста
 ```
