@@ -14,22 +14,46 @@ class Picture(models.Model):
 
 ### Типы моделей
 ```python
-#Модель названия
+#Тип названия
 name = models.CharField(max_length=50)
 # max_length - максимальная длина текста
 
-#Модель текста
+#Тип текста
 text = models.TextField()
 
-#Модель числа
+#Тип числа
 num = models.IntegerField()
 
-#Модель даты
+#Тип дробного числа
+float = models.FloatField()
+
+#Тип даты
 date = models.DateField()
 #Автоматически добаляет сегодняшнюю дату
 
-#Модель дата и время
+#Тип дата и время
 datetime = models.DateTimeField(default=timezone.now)
+
+#Тип почты
+email = models.EmailField()
+
+#Тип файла
+file = models.FileField()
+
+#Тип изображения
+image = models.ImageField()
+
+#Тип IP адресса
+ip = models.GenericIPAddressField()
+
+#Тип названий
+url = models.SlugField()
+
+#Тип время
+time = models.TimeField()
+
+#Тип url
+url = models.URLField()
 ```
 
 ### Внешние ключи
